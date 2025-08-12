@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.0/flowbite.min.js"></script>
+    <title>Top Events</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="shortcut icon"
+      href="data:image/png;base64,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"
+    />
+  </head>
+<body class="min-h-screen flex flex-col">
+  <header>
+    <nav class="bg-transparent backdrop-blur-lg border-transparent shadow-md">
+      <div
+        class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4"
+      >
+        <!-- Brand Name -->
+        <span
+          class="self-center text-3xl font-bold whitespace-nowrap dark:text-black"
+        >
+          Top Events
+        </span>
+
+        <!-- Mobile Menu Button (Hamburger) -->
+        <button
+          id="mobile-menu-button"
+          type="button"
+          class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-black rounded-lg md:hidden hover:bg-black focus:outline-none focus:ring-2 focus:ring-black dark:text-black dark:hover:bg-black dark:focus:ring-black"
+          aria-controls="navbar-search"
+          aria-expanded="false"
+        >
+          <span class="sr-only">Open main menu</span>
+          <svg
+            class="w-5 h-5"
+            aria-hidden="true"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 17 14"
+          >
+            <path
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M1 1h15M1 7h15M1 13h15"
+            />
+          </svg>
+        </button>
+
+        <!-- Navigation Links + Mobile Login/Signup -->
+        <div
+          class="hidden w-full md:flex md:w-auto md:order-1"
+          id="navbar-search"
+        >
+          <ul
+            class="flex flex-col md:flex-row md:space-x-8 font-medium mt-4 md:mt-0 md:items-center"
+          >
+            <li>
+              <a
+                href="index.html"
+                class="block py-2 px-3 text-black hover:text-green-700 dark:hover:text-green-500"
+                >Home</a
+              >
+            </li>
+            <li>
+              <a
+                href="events.html"
+                class="block py-2 px-3 text-black hover:text-green-700 dark:hover:text-green-500"
+                >Events</a
+              >
+            </li>
+            <li>
+              <a
+                href="holidays.html"
+                class="block py-2 px-3 text-black hover:text-green-700 dark:hover:text-green-500"
+                >Holidays</a
+              >
+            </li>
+            <li>
+              <a
+                href="hotels.html"
+                class="block py-2 px-3 text-black hover:text-green-700 dark:hover:text-green-500"
+                >Hotels</a
+              >
+            </li>
+
+            <!-- Buttons for mobile view -->
+            <li class="block md:hidden mt-4 space-y-2">
+              <a href="login.html">
+                <button
+                  class="w-full bg-green-500 text-black px-4 py-2 rounded-full hover:bg-green-600 hover:text-white"
+                >
+                  Login
+                </button>
+              </a>
+              <a href="signup.html">
+                <button
+                  class="w-full bg-transparent border border-green-500 text-black px-4 py-2 rounded-full hover:bg-green-600 hover:text-white"
+                >
+                  Sign Up
+                </button>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Buttons for desktop view -->
+        <div class="hidden md:flex md:order-2 space-x-4">
+          <a href="login.html">
+            <button
+              class="bg-green-500 text-black px-4 py-2 rounded-full hover:bg-green-600 hover:text-white"
+            >
+              Login
+            </button>
+          </a>
+          <a href="signup.html">
+            <button
+              class="bg-transparent border border-green-500 text-black px-4 py-2 rounded-full hover:bg-green-600 hover:text-white"
+            >
+              Sign Up
+            </button>
+          </a>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main class="flex-grow">
+    <form
+      class="bg-white dark:bg-gray-800 p-8 rounded-lg shadow-lg w-full max-w-sm mx-auto my-20"
+    >
+      <h2
+        class="text-2xl font-bold mb-6 text-gray-900 dark:text-white text-center"
+      >
+        Sign Up
+      </h2>
+
+      <div class="mb-5">
+        <label
+          for="email"
+          class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+          >Your email</label
+        >
+        <input
+          type="email"
+          id="email"
+          class="shadow-xs bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:text-white"
+          placeholder="name@example.com"
+          required
+        />
+      </div>
+
+      <div class="mb-5">
+        <label
+          for="password"
+          class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+          >Your password</label
+        >
+        <input
+          type="password"
+          id="password"
+          class="shadow-xs bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:text-white"
+          required
+        />
+      </div>
+
+      <div class="mb-5">
+        <label
+          for="repeat-password"
+          class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+          >Repeat password</label
+        >
+        <input
+          type="password"
+          id="repeat-password"
+          class="shadow-xs bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:text-white"
+          required
+        />
+      </div>
+
+      <button
+        type="submit"
+        class="w-full text-white bg-green-700 hover:bg-green-800 font-medium rounded-lg text-sm px-5 py-2.5 dark:bg-green-600 dark:hover:bg-green-700"
+      >
+        Register
+      </button>
+
+      <p class="mt-4 text-sm text-center text-gray-600 dark:text-gray-400">
+        Already have an account?
+        <a
+          href="login.html"
+          class="text-green-600 hover:underline dark:text-green-400"
+          >Login here</a
+        >
+      </p>
+    </form>
+  </main>
+
+  <footer
+    class="bg-transparent backdrop-blur-lg rounded-sm shadow-md dark:bg-transparent border-t border-gray-300"
+  >
+    <div class="w-full max-w-screen-xl mx-auto p-4 md:py-8">
+      <div class="sm:flex sm:items-center sm:justify-between">
+        <span
+          class="self-center text-2xl font-bold whitespace-nowrap dark:text-black"
+        >
+          Top Events
+        </span>
+        <ul
+          class="flex flex-wrap items-center mb-6 text-sm font-medium text-black sm:mb-0 dark:text-black"
+        >
+          <li>
+            <a
+              href="events.html"
+              class="hover:underline hover:text-green-700 me-4 md:me-6"
+              >Events</a
+            >
+          </li>
+          <li>
+            <a
+              href="holidays.html"
+              class="hover:underline hover:text-green-700 me-4 md:me-6"
+              >Holidays</a
+            >
+          </li>
+          <li>
+            <a
+              href="hotels.html"
+              class="hover:underline hover:text-green-700 me-4 md:me-6"
+              >Hotels</a
+            >
+          </li>
+        </ul>
+      </div>
+      <hr
+        class="my-6 border-gray-300 sm:mx-auto dark:border-gray-700 lg:my-8 shadow-md"
+      />
+      <span class="block text-sm text-black sm:text-center dark:text-black">
+        © 2025
+        <a href="https://flowbite.com/" class="hover:underline text-black"
+          >Top Events™</a
+        >. All Rights Reserved.
+      </span>
+    </div>
+  </footer>
+
+  <script>
+    // Mobile menu toggle script
+    const btn = document.getElementById("mobile-menu-button");
+    const menu = document.getElementById("navbar-search");
+
+    btn.addEventListener("click", () => {
+      menu.classList.toggle("hidden");
+      // Toggle aria-expanded
+      const expanded = btn.getAttribute("aria-expanded") === "true" || false;
+      btn.setAttribute("aria-expanded", !expanded);
+    });
+  </script>
+</body>
+
+
+</html>
